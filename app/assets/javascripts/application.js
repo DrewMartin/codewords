@@ -16,4 +16,4 @@
 //= require_tree .
 //= require react-with-addons
 //= require react-dom
-
+//= require bootstrap-sprockets
