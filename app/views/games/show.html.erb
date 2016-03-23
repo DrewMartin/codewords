@@ -1,0 +1,9 @@
+<div class="container">
+	<h1>Game</h1>
+
+	<% @game.cards.each do |card| %>
+		<div class="card label <%= card.owner %>">
+	  		<span><%= card.word %></span>
+		</div>
+	<% end %>
+</div>

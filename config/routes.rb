@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   # root 'welcome#index'
     root 'lobby#index'
 
+    get 'game' => 'games#show'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
