@@ -1,5 +1,12 @@
 <div class="container">
-  	<div>success!</div>
+  <div>success!</div>
 
-	<button class="btn">Test</button>
+  <% unless @player_exists %>
+    <%= form_for Player.new, url: player_path, method: 'POST' do |form| %>
+      <%= form.label :name %>
+      <%= form.text_field :name %>
+      <%= form.submit %>
+    <% end %>
+
+  <% end %>
 </div>

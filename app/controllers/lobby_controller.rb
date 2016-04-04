@@ -6,6 +6,16 @@ class LobbyController < ActionController::Base
   layout 'application'
 
   def index
+    @player_exists = session[:player_id].present?
     respond_to :html
+  end
+
+  def create_player
+    if name = params.require(:name)
+      player = Player.create(name: name)
+      debugger
+    else
+
+    end
   end
 end

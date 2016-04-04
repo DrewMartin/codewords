@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
     get 'game' => 'games#show'
 
+    post 'player' => 'lobby#create_player'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
