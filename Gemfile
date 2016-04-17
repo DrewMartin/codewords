@@ -40,7 +40,8 @@ gem 'bootstrap-sass'
 # Necessary?
 gem 'tzinfo-data'
 
-gem 'sprockets-coffee-react'
+# sprockets-coffee-react causes everything to blow up on windows
+#gem 'sprockets-coffee-react'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
