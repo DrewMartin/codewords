@@ -2,7 +2,15 @@
 	<h1>Game</h1>
 
 	<% @game.cards.each do |card| %>
-		<div class="card label <%= card.owner %>">
+		<div class="card label<%= (' ' + card.owner + ' revealed') if card.revealed %>">
+	  		<span><%= card.word %></span>
+		</div>
+	<% end %>
+
+	<h2>Spymasters</h2>
+
+	<% @game.cards.each do |card| %>
+		<div class="card label <%= card.owner %><%= ' revealed' if card.revealed %>">
 	  		<span><%= card.word %></span>
 		</div>
 	<% end %>

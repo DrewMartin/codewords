@@ -15,14 +15,17 @@ class GamesController < ActionController::Base
 
 			# Create cards
 			words = ["APPLE", "TREE", "BUTTERFLY", "LAKE", "BOMB", "DOLPHIN"].shuffle
-			owners = [:red,:blue,:neutral,:neutral,:trap].shuffle
+			owners = [:red,:red,:red,:red,:red,:red,:red,:red,:red,
+				      :blue,:blue,:blue,:blue,:blue,:blue,:blue,:blue,
+				      :neutral,:neutral,:neutral,:neutral,:neutral,:neutral,:neutral,
+				      :trap].shuffle
 
 			for i in (1..25)
 				card = Card.new
 				card.game = @game
 				card.word = words[(i - 1) % words.length]
-				card.owner = owners[(i - 1) % owners.length]
-				card.revealed = false
+				card.owner = owners[i - 1]
+				card.revealed = i > 10
 				card.save
 			end
 		else
