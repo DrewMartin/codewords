@@ -1,26 +1,21 @@
 // Place all the styles related to the games controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-.container {
-}
-
 .card {
 	display: inline-block;
 	font-size: 2em;
 
 	width: 17.5%;
-	height: 3em;
+	height: 4em;
 	margin: 1%;
 	padding: 0;
 	
 	background-color: #f5efdc;
-	border: 2px solid black;
+	border: 1px solid black;
 	box-shadow: inset 0 0 9px 3px rgba(0,0,0,0.2);
 
-	line-height: 3em;
+	line-height: 4em;
 	color: #333;
-	text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 
 .card>span {
@@ -31,31 +26,7 @@
 
 .card.revealed>span {
 	background-color: transparent;
-	color: rgba(0,0,0,0.3);
-}
-
-.card.revealed.neutral>span {
-  text-shadow: 
-    1px 1px 1px rgba(255,255,255,0.33),
-   -1px -1px 1px rgba(0,0,0,0.67);
-}
-
-.card.revealed.red>span {
-  text-shadow: 
-    1px 1px 1px rgba(255,128,128,0.33),
-   -1px -1px 1px rgba(0,0,0,0.67);
-}
-
-.card.revealed.blue>span {
-  text-shadow: 
-    1px 1px 1px rgba(128,128,255,0.33),
-   -1px -1px 1px rgba(0,0,0,0.67);
-}
-
-.card.revealed.trap>span {
-  text-shadow: 
-    1px 1px 1px rgba(128,128,128,0.33),
-   -1px -1px 1px rgba(0,0,0,0.67);
+	color: rgba(0,0,0,0.5);
 }
 
 .neutral {
@@ -72,4 +43,90 @@
 
 .trap {
 	background-color: #333;
+}
+
+.container {
+	font-size: 20%;
+}
+
+@media (min-width: 285px) {
+	.container {
+		font-size: 25%;
+	}
+}
+
+@media (min-width: 350px) {
+	.container {
+		font-size: 30%;
+	}
+}
+
+@media (min-width: 440px) {
+	.container {
+		font-size: 40%;
+	}
+}
+
+@media (min-width: 550px) {
+	.container {
+		font-size: 50%;
+	}
+}
+
+@media (min-width: 650px) {
+	.container {
+		font-size: 60%;
+	}
+
+	.card {
+		border: 2px solid black;
+		text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+	}
+
+	.card.revealed>span {
+		background-color: transparent;
+		color: rgba(0,0,0,0.3);
+	}
+
+	.card.revealed.neutral>span {
+	  text-shadow: 
+	    1px 1px 1px rgba(255,255,255,0.33),
+	   -1px -1px 1px rgba(0,0,0,0.67);
+	}
+
+	.card.revealed.red>span {
+	  text-shadow: 
+	    1px 1px 1px rgba(255,128,128,0.33),
+	   -1px -1px 1px rgba(0,0,0,0.67);
+	}
+
+	.card.revealed.blue>span {
+	  text-shadow: 
+	    1px 1px 1px rgba(128,128,255,0.33),
+	   -1px -1px 1px rgba(0,0,0,0.67);
+	}
+
+	.card.revealed.trap>span {
+	  text-shadow: 
+	    1px 1px 1px rgba(128,128,128,0.33),
+	   -1px -1px 1px rgba(0,0,0,0.67);
+	}
+}
+
+@media (min-width: 768px) {
+	.container {
+		font-size: 65%;
+	}
+}
+
+@media (min-width: 992px) {
+	.container {
+		font-size: 85%;
+	}
+}
+
+@media (min-width: 1200px) {
+	.container {
+		font-size: 100%;
+	}
 }
